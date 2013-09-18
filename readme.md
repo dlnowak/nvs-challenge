@@ -1,8 +1,22 @@
-# New Variorum Shakespeare Digital Files
+## The New Variorum Shakespeare Digital Challenge: The Second Round
 
-The MLA has released the XML files and schema for _The Comedy of Errors_, in the New Variorum Edition of Shakespeare Series, under a [Creative Commons BY-NC 3.0 license](http://creativecommons.org/licenses/by-nc/3.0/). Scholars may freely [download these files from GitHub](http://github.com/mlaa/nvs-challenge) and use this material in their research.
+The MLA Committee on the New Variorum Edition of Shakespeare (NVS) is sponsoring its second digital challenge to find the most innovative and compelling uses of the data contained in one of the NVS editions. This year the MLA is making available the XML files and schema for two volumes, _The Winter’s Tale_ and _The Comedy of Errors_, under a [Creative Commons BY-NC 3.0 license][cc-by-nc].
 
-## A Note on Data Design and TEI Conformance
+The committee seeks entries featuring new means of displaying, representing, and exploring this data in the most exciting API, interface, visualization, or data-mining project. It is especially interested in entries that combine the NVS data with another Shakespearian project, such as _Folger Digital Texts_, _Internet Shakespeare Editions_, or _Open Source Shakespeare_. The goal is to see the possibilities of the NVS in digital form and, in particular, the innovations in scholarly research that might be enabled by opening up the NVS’s code. Projects will thus be judged both on the quality of the interface they provide for the NVS and on the insights produced by the mash-up.
+
+The deadline for entries is 1 August 2014. The committee will assess the submissions and select the winner no later than 15 September 2014. The prize of $500 and an award certificate will be given at the 2015 MLA convention in Vancouver.
+
+Entries may be sent to <nvs@mla.org>.  Questions about the NVS Digital Challenge should be addressed to Kathleen Fitzpatrick, director of scholarly communication, at <kfitzpatrick@mla.org>.
+
+For more information about our partner projects, please contact Michael Best (<mbest1@uvic.ca>), of _Internet Shakespeare Editions_, or Eric Johnson (<eric.johnson@folger.edu>), of _Open Source Shakespeare_ and _Folger Digital Texts_.
+
+Please note that our partners are available not to provide technical support but to answer questions about the resources.
+
+### The First Round
+
+In the 2012 digital challenge, the MLA released the XML files and schema for _The Comedy of Errors_ under a [Creative Commons BY-NC 3.0 license][cc-by-nc]. The winner of the challenge was Patrick Murray-John’s _Bill-Crit-O-Matic_ (<http://billcritomatic.org>). The runner-up was Doug Reside and Gregory Lord’s _Comedy of Errors_ (<http://comedyoferrors.zengrove.com>).
+
+### A Note on Data Design and TEI Conformance
 
 The MLA is making a preliminary version of the source XML data for its NVS editions publicly available for research and experimentation. Some explanation of the motives guiding the design of the data and of the data’s status as an intellectual product may be helpful to those who wish to use the data.
 
@@ -14,6 +28,10 @@ However, it is important to note that the data can be converted to TEI conforman
 
 Finally, the MLA may in the future create versions of the data that are specifically intended to support an electronic NVS edition, and those versions may better lend themselves to expression as TEI conformant or conformable data (since they will not have to support the print-specific features of the edition).
 
-This work is licensed under a [Creative Commons Attribution-NonCommercial 3.0 Unported License](http://creativecommons.org/licenses/by-nc/3.0/).
+### License
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial 3.0 Unported License][cc-by-nc].
 
 ![Creative Commons License](http://i.creativecommons.org/l/by-nc/3.0/88x31.png)
+
+[cc-by-nc]: http://creativecommons.org/licenses/by-nc/3.0/
