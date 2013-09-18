@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.wwp.brown.edu/outreach/seminars/_current/handouts/ODD_exercise/schemas/odd4odds.isosch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.wwp.brown.edu/outreach/seminars/_current/handouts/ODD_exercise/schemas/odd4odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+
+  <teiHeader>
+
+    <fileDesc>
+      <titleStmt>
+        <title>NVS Editions</title>
+        <author>Ridgeback</author>
+      </titleStmt>
+      <publicationStmt>
+        <p>For use by whoever wants it.</p>
+      </publicationStmt>
+      <notesStmt>
+        <note type="ns">http://www.example.org/ns/nonTEI</note>
+      </notesStmt>
+      <sourceDesc>
+        <p>Created on Monday 23rd November 2009 12:14:24 PM.</p>
+      </sourceDesc>
+    </fileDesc>
+
+	<revisionDesc>
+		<change when="2013-09-01" n="2.2">RB: Minor reconfiguration of the ODD File</change>
+		<change when="2013-02-06" n="2.1">RB: Added link element and values for div</change>
+		<change when="2012-07-06" n="2.0">RB: Final changes req'd for Lear</change>
+		<change when="2011-09-14" n="1.7">RB: Updated for TEI P5 v1.9.1; added sic and corr to various content models</change>
+		<change when="2010-05-18" n="1.6">RB: Changed content model of respStmt</change>
+		<change when="2010-04-12" n="1.5">RB: Changed content model of nvsSeg (macro.anyXML was preventing validation of xml:id uniqueness)</change>
+	</revisionDesc>
+
+  </teiHeader>
+
+
+  <text>
+
+    <front>
+      <divGen type="toc"/>
+    </front>
+
+    <body>
+      	<p>This customization is for use in encoding the NVS volumes.</p>
+
+			<schemaSpec source="tei:2.1.0" ident="nvs" docLang="en" prefix="nvs_" start="TEI" xml:lang="en"
+				ns="http://www.mla.org/NVSns" xmlns="http://www.tei-c.org/ns/1.0"
+				xmlns:rng="http://relaxng.org/ns/structure/1.0">
+
+				<!-- SELECTION OF TEI MODULES TO BE INCLUDED IN THE SCHEMA -->
+				<moduleRef key="core" include="abbr addrLine address author bibl biblScope cit corr date editor expan foreign graphic head  hi item l label lb lg list listBibl milestone name note p ptr pubPlace publisher quote ref resp respStmt rs said sic sp speaker stage title"/>
+				<moduleRef key="tei"/>
+				<moduleRef key="header" include="availability change classDecl edition editionStmt encodingDesc extent fileDesc idno keywords langUsage language licence profileDesc projectDesc publicationStmt revisionDesc seriesStmt sourceDesc taxonomy teiHeader textClass titleStmt"/>
+				<moduleRef key="textstructure" include="TEI argument back body byline closer dateline div docAuthor docDate docImprint docTitle epigraph floatingText front opener salute signed text titlePage titlePart trailer"/>
+				<moduleRef key="figures" except="formula notatedMusic"/>
+				<moduleRef key="linking" include="ab anchor link"/>
+				<moduleRef key="textcrit" include="app lem listWit rdg wit witness"/>
+				<moduleRef key="drama" include="castGroup castItem castList role roleDesc"/>
+				<moduleRef key="transcr" include="space"/>
+
+
+				<!-- ADDITION OF NEW ELEMENTS -->
+				<elementSpec ident="appPart" mode="add">
+					<desc>Encloses sets of readings and witness lists within textual notes.</desc>
+					<classes mode="change">
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+						<rng:oneOrMore>
+							<rng:choice>
+								<rng:ref name="rdg"/>
+								<rng:ref name="rdgDesc"/>
+								<rng:ref name="wit"/>
+								<rng:ref name="model.global"/>
+								<rng:text/>
+							</rng:choice>	
+						</rng:oneOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="lemNote" mode="add">
+					<desc>Encloses anything in the lemma of a note which is not in the source text.</desc>
+					<classes mode="change">
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+						<rng:oneOrMore>
+							<rng:choice>
+								<rng:ref name="hi"/>
+								<rng:ref name="model.global"/>
+								<rng:text/>
+							</rng:choice>
+						</rng:oneOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="nvsSeg" mode="add">
+					<desc>Encloses any range of text which needs to be marked for special rendition.</desc>
+					<classes mode="change">
+						<memberOf key="att.global"/>
+						<memberOf key="model.global"/>
+					</classes>
+					<content>
+						<rng:oneOrMore>
+							<rng:choice>
+								<rng:ref name="macro.specialPara"/>
+								<rng:ref name="model.biblPart"/>
+								<rng:ref name="model.global"/>
+								<rng:ref name="model.pLike.front"/>
+								<rng:ref name="speaker"/>
+								<rng:text/>
+							</rng:choice>
+						</rng:oneOrMore>
+					</content>
+					<attList>
+						<attDef ident="type" mode="add" usage="req">
+							<datatype maxOccurs="1">
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="edDiff"/>
+								<valItem ident="linePart"/>
+								<valItem ident="marginalia"/>
+								<valItem ident="rend"/>
+							</valList>
+						</attDef>
+						<attDef ident="ed" mode="add" usage="opt">
+							<datatype maxOccurs="1">
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="Q"/>
+								<valItem ident="F"/>
+							</valList>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="rdgDesc" mode="add">
+					<desc>Encloses text in the readings which is not strictly part of the reading.</desc>
+					<classes mode="change">
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+						<rng:oneOrMore>
+							<rng:choice>
+								<rng:ref name="rdg"/>
+								<rng:ref name="lem"/>
+								<rng:ref name="wit"/>
+								<rng:ref name="hi"/>
+								<rng:ref name="siglum"/>
+								<rng:ref name="ref"/>
+								<rng:ref name="lb"/>
+								<rng:ref name="quote"/>
+								<rng:ref name="rs"/>
+								<rng:ref name="name"/>
+								<rng:ref name="milestone"/>
+								<rng:ref name="foreign"/>
+								<rng:ref name="sic"/>
+								<rng:ref name="corr"/>
+								<rng:ref name="model.global"/>
+								<rng:text/>
+							</rng:choice>
+						</rng:oneOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="siglum" mode="add">
+					<desc>Encloses a siglum.</desc>
+					<classes mode="change">
+						<memberOf key="att.global"/>
+						<memberOf key="model.phrase"/>
+						<memberOf key="model.biblPart"/>
+					</classes>
+					<content>
+						<rng:oneOrMore>
+							<rng:choice>
+								<rng:ref name="hi"/>
+								<rng:ref name="sic"/>
+								<rng:ref name="corr"/>
+								<rng:ref name="model.global"/>
+								<rng:text/>
+							</rng:choice>
+						</rng:oneOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="translator" mode="add">
+					<desc>Encloses the name of a translator.</desc>
+					<classes mode="change">
+						<memberOf key="att.global"/>
+						<memberOf key="model.biblPart"/>
+					</classes>
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:ref name="macro.phraseSeq"/>
+								<rng:ref name="model.global"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+
+
+
+
+
+
+				<!-- CHANGES TO EXISTING ELEMENTS -->
+				<elementSpec ident="anchor" mode="change" module="linking">
+					<!--	Add @marker and constrain values for @type  	-->
+					<attList>
+						<attDef ident="marker" usage="opt" mode="add">
+							<datatype maxOccurs="1">
+								<rng:text/>
+							</datatype>
+						</attDef>
+						<attDef ident="type" usage="req" mode="replace">
+							<datatype maxOccurs="1">
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="marker"><desc>Replaces a textual marker</desc></valItem>
+								<valItem ident="xref"><desc>Target of an internal reference</desc></valItem>
+								<valItem ident="fn"><desc>Footnote</desc></valItem>
+								<valItem ident="mgn"><desc>Margin note</desc></valItem>
+								<valItem ident="en"><desc>Endnote</desc></valItem>
+							</valList>
+						</attDef>
+					</attList>					
+				</elementSpec>
+
+				<elementSpec ident="app" mode="change" module="textcrit">
+					<!--	Add several elements and unconstrain the order  	-->
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="lem"/>
+								<rng:ref name="appPart"/>
+								<rng:ref name="rdg"/>
+								<rng:ref name="rdgDesc"/>
+								<rng:ref name="wit"/>
+								<rng:ref name="rs"/>
+								<rng:ref name="hi"/>
+								<rng:ref name="model.global"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="bibl" mode="change" module="core">
+					<!--	Add @part  	-->
+					<attList>
+						<attDef ident="part" mode="add">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="I"/>
+								<valItem ident="M"/>
+								<valItem ident="F"/>
+							</valList>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="biblScope" mode="change" module="core">
+					<!--	Constrain @type		-->
+					<attList>
+						<attDef ident="type" mode="replace">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="misc"/>
+								<valItem ident="vol"/>
+								<valItem ident="pages"/>
+								<valItem ident="series"/>
+								<valItem ident="issue"/>
+								<valItem ident="part"/>
+								<valItem ident="act"/>
+								<valItem ident="scene"/>
+								<valItem ident="line"/>
+							</valList>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="byline" mode="change" module="textstructure">
+					<!--	Add <author> and <editor> to content		-->
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="model.gLike"/>
+								<rng:ref name="model.phrase"/>
+								<rng:ref name="docAuthor"/>
+								<rng:ref name="model.global"/>
+								<rng:ref name="author"/>
+								<rng:ref name="editor"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="corr" mode="change" module="core">
+					<!--	 Set the content model to be as flexible as possible		-->
+					<classes mode="change">
+						<memberOf key="model.global"/>
+					</classes>
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="macro.specialPara"/>
+								<rng:ref name="model.biblPart"/>
+								<rng:ref name="model.global"/>
+								<rng:ref name="lem"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="div" mode="change" module="textstructure">
+					<!--	Constrain @type  	-->
+					<attList>
+						<attDef ident="type" mode="replace">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="act"/>
+								<valItem ident="appendix"/>
+								<valItem ident="bibliography"/>
+								<valItem ident="castlist"/>
+								<valItem ident="castlist_notes"/>
+								<valItem ident="commentary"/>
+								<valItem ident="copyright"/>
+								<valItem ident="endnotes"/>
+								<valItem ident="endpapers"/>
+								<valItem ident="end_editions"/>
+								<valItem ident="end_editions_main"/>
+								<valItem ident="end_editions_other"/>
+								<valItem ident="end_symbols"/>
+								<valItem ident="end_sigla"/>
+								<valItem ident="frontispiece"/>
+								<valItem ident="index"/>
+								<valItem ident="level1"/>
+								<valItem ident="level2"/>
+								<valItem ident="level3"/>
+								<valItem ident="level4"/>
+								<valItem ident="level5"/>
+								<valItem ident="level6"/>
+								<valItem ident="level7"/>
+								<valItem ident="playtext"/>
+								<valItem ident="playtext_meta"/>
+								<valItem ident="playtext_missing_lines"/>
+								<valItem ident="playtext_source"/>
+								<valItem ident="playtext_virtual_lines"/>
+								<valItem ident="preface"/>
+								<valItem ident="potw"/>
+								<valItem ident="scene"/>
+								<valItem ident="textualnotes"/>
+								<valItem ident="toc"/>
+							</valList>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="lem" mode="change" module="textcrit">
+					<!--	Add <lemNote> to content		-->
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="model.gLike"/>
+								<rng:ref name="model.phrase"/>
+								<rng:ref name="model.inter"/>
+								<rng:ref name="model.global"/>
+								<rng:ref name="model.rdgPart"/>
+								<rng:ref name="lemNote"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="milestone" mode="change" module="core">
+					<!--	Add PCDATA and <hi> to content		-->
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="hi"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="note" mode="change" module="core">
+					<!--	Constrain @type and @place; add <lem> to content	-->
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="model.gLike"/>
+								<rng:ref name="model.phrase"/>
+								<rng:ref name="model.inter"/>
+								<rng:ref name="model.divPart"/>
+								<rng:ref name="model.biblPart"/>
+								<rng:ref name="model.global"/>
+								<rng:ref name="lem"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+					<attList>
+						<attDef ident="type" mode="replace">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="source"/>
+								<valItem ident="commentary"/>
+								<valItem ident="textual"/>
+								<valItem ident="irregular"/>
+								<valItem ident="unadopted"/>
+							</valList>
+						</attDef>
+						<attDef ident="place" mode="replace">
+							<datatype maxOccurs="1">
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="inline"/>
+								<valItem ident="foot"/>
+								<valItem ident="end"/>
+								<valItem ident="margin_left"/>
+								<valItem ident="margin_right"/>
+							</valList>
+						</attDef>
+						<attDef ident="marker" usage="opt" mode="add">
+							<datatype maxOccurs="1">
+								<rng:ref name="data.word"/>
+							</datatype>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="ptr" mode="change" module="core">
+					<!--	Add @targetEnd		-->
+					<attList>
+						<attDef ident="cRef" mode="delete"/>
+						<attDef ident="targetEnd" mode="add">
+							<datatype>
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+						<attDef ident="targType" mode="add">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+						</attDef>
+						<attDef ident="mode" mode="add">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="toc"/>
+								<valItem ident="list"/>
+								<valItem ident="listFirst"/>
+								<valItem ident="ff"/>
+							</valList>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="quote" mode="change" module="core">
+					<!--	Add @part; constrain @type; add element to model.biblPart		-->
+					<classes mode="change">
+						<memberOf key="model.biblPart" mode="add"/>
+						<memberOf key="model.quoteLike" mode="add"/>
+					</classes>
+					<attList>
+						<attDef ident="part" mode="add">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="I"/>
+								<valItem ident="M"/>
+								<valItem ident="F"/>
+							</valList>
+						</attDef>
+						<attDef ident="type" mode="replace">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="trans"/>
+							</valList>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="rdg" mode="change" module="textcrit">
+					<!--	Add @part; add <head> to content	-->
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="model.gLike"/>
+								<rng:ref name="model.phrase"/>
+								<rng:ref name="model.inter"/>
+								<rng:ref name="model.global"/>
+								<rng:ref name="model.rdgPart"/>
+								<rng:ref name="head"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+					<attList>
+						<attDef ident="part" mode="add">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="I"/>
+								<valItem ident="M"/>
+								<valItem ident="F"/>
+							</valList>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="ref" mode="change" module="core">
+					<!--	Add @targetEnd		-->
+					<attList>
+						<attDef ident="targetEnd" usage="opt" mode="add">
+							<datatype maxOccurs="unbounded">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+						<attDef ident="targType" mode="add">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="respStmt" mode="change" module="core">
+					<!--	Add PCDATA, <author>, <editor>, <translator> to content and remove constraints	-->
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="resp"/>
+								<rng:ref name="name"/>
+								<rng:ref name="author"/>
+								<rng:ref name="editor"/>
+								<rng:ref name="translator"/>
+								<rng:ref name="date"/>
+								<rng:ref name="model.global"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="row" mode="change" module="figures">
+					<!--	Add value to @role 	-->
+					<attList>
+						<attDef ident="role" mode="change">
+							<datatype>
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed" mode="replace">
+								<valItem ident="summary"/>
+								<valItem ident="label"/>
+								<valItem ident="data"/>
+							</valList>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="rs" mode="change" module="core">
+					<!--	Add <quote> to content	-->
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="model.gLike"/>
+								<rng:ref name="model.phrase"/>
+								<rng:ref name="model.global"/>
+								<rng:ref name="quote"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="sic" mode="change" module="core">
+					<!--	 Set the content model to be as flexible as possible		-->
+					<classes mode="change">
+						<memberOf key="model.global"/>
+					</classes>
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="macro.specialPara"/>
+								<rng:ref name="model.biblPart"/>
+								<rng:ref name="model.global"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="stage" mode="change" module="core">
+					<!--	Constrain values for @type; allow up to four tokenised values in a single attribute	-->
+					<attList>
+						<attDef ident="type" mode="replace">
+							<desc>Indicates the kind of stage direction.</desc>
+							<datatype minOccurs="1" maxOccurs="3">
+								<rng:ref name="data.enumerated"/>
+							</datatype>
+							<valList type="closed">
+								<valItem ident="enter">
+									<desc>An entrance</desc>
+								</valItem>
+								<valItem ident="exit">
+									<desc>An exit</desc>
+								</valItem>
+								<valItem ident="location">
+									<desc>Gives a location</desc>
+								</valItem>
+								<valItem ident="description">
+									<desc>Describes actions, manners etc</desc>
+								</valItem>
+							</valList>
+						</attDef>
+					</attList>
+				</elementSpec>
+
+				<elementSpec ident="wit" mode="change" module="textcrit">
+					<!--	Add <quote> to content	-->
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="model.gLike"/>
+								<rng:ref name="model.phrase"/>
+								<rng:ref name="model.global"/>
+								<rng:ref name="quote"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+				<elementSpec ident="witness" mode="change" module="textcrit">
+					<!--	Add <siglum> to content	-->
+					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:ref name="model.limitedPhrase"/>
+								<rng:ref name="model.inter"/>
+								<rng:ref name="siglum"/>
+							</rng:choice>
+						</rng:zeroOrMore>
+					</content>
+				</elementSpec>
+
+
+
+
+
+				<!-- ATTRIBUTE CHANGES -->
+				<classSpec ident="att.global" type="atts" mode="change" module="tei">
+					<attList>
+
+						<!-- Adding @display as a global attribute -->
+						<attDef ident="display" mode="add">
+							<valList type="closed">
+								<valItem ident="book(ldash)"/>
+								<valItem ident="book(suppress)"/>
+								<valItem ident="all(suppress)"/>
+								<valItem ident="all(invisible)"/>
+								<valItem ident="electronic(suppress)"/>
+							</valList>
+						</attDef>
+
+						<!--  Casting the value of @rendition as a single keyword  -->
+						<attDef ident="rendition" mode="change">
+							<datatype>
+								<rng:ref name="data.word"/>
+							</datatype>
+						</attDef>
+
+						<!--  Constraining values for @rend, including a regexp for indent(); multiple values allowed  -->
+						<attDef ident="rend" mode="change">
+							<datatype maxOccurs="unbounded">
+								<rng:data type="token">
+									<rng:param name="pattern">align\(center\)|align\(left\)|align\(right\)|allcaps|block|bold|braced|clear|inline|italic|listPrefix\(1\)|listPrefix\(a\)|listPrefix\(I\)|listPrefix\(i\)|lscaps|open_quotes|outdent|print_tln|print|quotes|smcaps|sq_brackets|superscript|subscript|asterisk|indent\(\d+\.?\d*em\)</rng:param>
+								</rng:data>
+							</datatype>
+						</attDef>
+
+					</attList>
+				</classSpec>
+
+
+			</schemaSpec>
+    </body>
+  </text>
+</TEI>
