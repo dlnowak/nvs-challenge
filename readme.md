@@ -10,7 +10,8 @@ Entries may be sent to <nvs@mla.org>.  Questions about the NVS Digital Challenge
 
 For more information about our partner projects, please contact Michael Best (<mbest1@uvic.ca>), of _Internet Shakespeare Editions_, or Eric Johnson (<eric.johnson@folger.edu>), of _Open Source Shakespeare_ and _Folger Digital Texts_.
 
-Please note that our partners are available not to provide technical support but to answer questions about the resources.
+Please note that our partners are available to answer questions about the
+ resources, not to provide technical support.
 
 ### The First Round
 
