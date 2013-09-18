@@ -19,50 +19,50 @@
 <div type="playtext" xml:id="div_playtext">
 
 <div type="castlist" xml:id="div_castlist">
-<castList rend="sq_brackets">
-<lb xml:id="cast_line_01" n="1"/><head>Dramatis Personæ.</head>
+<castList>
+<lb xml:id="dpln_01" n="1"/><head><anchor type="marker" marker="["/>Dramatis Personæ.</head>
 
-<lb xml:id="cast_line_02" n="2"/><castItem><role xml:id="Salinus">Salinus</role>, <roleDesc><hi rend="italic">Duke of</hi> Ephesus</roleDesc>.</castItem>
+<lb xml:id="dpln_02" n="2"/><castItem><role xml:id="Salinus">Salinus</role>, <roleDesc><hi rend="italic">Duke of</hi> Ephesus</roleDesc>.</castItem>
 
-<lb xml:id="cast_line_03" n="3"/><castItem><role xml:id="Aegeon">Ægeon</role>, <roleDesc><hi rend="italic">a Merchant of</hi> Syracuse</roleDesc>.</castItem>
+<lb xml:id="dpln_03" n="3"/><castItem><role xml:id="Aegeon">Ægeon</role>, <roleDesc><hi rend="italic">a Merchant of</hi> Syracuse</roleDesc>.</castItem>
 
 <castGroup>
-<lb xml:id="cast_line_04" n="4"/><castItem><role xml:id="Antipholus_Ephesus">Antipholis [Sereptus] <hi rend="italic">of</hi> Ephesus</role>,</castItem>
+<lb xml:id="dpln_04" n="4"/><castItem><role xml:id="Antipholus_Ephesus">Antipholis [Sereptus] <hi rend="italic">of</hi> Ephesus</role>,</castItem>
 
-<lb xml:id="cast_line_05" n="5" rend="print_tln"/><castItem><role xml:id="Antipholus_Syracuse">Antipholis [Erotes] <hi rend="italic">of</hi> Syracuse</role>,</castItem>
+<lb xml:id="dpln_05" n="5" rend="print_tln"/><castItem><role xml:id="Antipholus_Syracuse">Antipholis [Erotes] <hi rend="italic">of</hi> Syracuse</role>,</castItem>
 
 <roleDesc rend="braced"><hi rend="italic">Twin Brothers, and Sons to <hi rend="clear">Ægeon</hi> and <lb/><hi rend="clear">Æmilia</hi>, but unknown to each other.</hi></roleDesc>
 </castGroup>
 
 <castGroup>
-<lb xml:id="cast_line_06" n="6"/><castItem><role xml:id="Dromio_Ephesus">Dromio <hi rend="italic">of</hi> Ephesus</role>,</castItem>
+<lb xml:id="dpln_06" n="6"/><castItem><role xml:id="Dromio_Ephesus">Dromio <hi rend="italic">of</hi> Ephesus</role>,</castItem>
 
-<lb xml:id="cast_line_07" n="7"/><castItem><role xml:id="Dromio_Syracuse">Dromio <hi rend="italic">of</hi> Syracuse</role>,</castItem>
+<lb xml:id="dpln_07" n="7"/><castItem><role xml:id="Dromio_Syracuse">Dromio <hi rend="italic">of</hi> Syracuse</role>,</castItem>
 
 <roleDesc rend="braced"><hi rend="italic">Twin Brothers, and Slaves to <lb/>the two <hi rend="clear">Antipholis</hi>’s.</hi></roleDesc>
 </castGroup>
 
-<lb xml:id="cast_line_08" n="8"/><castItem><role xml:id="Balthazar">Balthazar</role>, <roleDesc><hi rend="italic">a Merchant</hi></roleDesc>.</castItem>
+<lb xml:id="dpln_08" n="8"/><castItem><role xml:id="Balthazar">Balthazar</role>, <roleDesc><hi rend="italic">a Merchant</hi></roleDesc>.</castItem>
 
-<lb xml:id="cast_line_09" n="09"/><castItem><role xml:id="Angelo">Angelo</role>, <roleDesc><hi rend="italic">a Goldsmith</hi></roleDesc>.</castItem>
+<lb xml:id="dpln_09" n="09"/><castItem><role xml:id="Angelo">Angelo</role>, <roleDesc><hi rend="italic">a Goldsmith</hi></roleDesc>.</castItem>
 
-<lb xml:id="cast_line_10" n="10" rend="print_tln"/><castItem><role xml:id="Merchant1"><hi rend="italic">A</hi> [<hi rend="italic">First</hi>] <hi rend="italic">Merchant</hi></role>, <roleDesc><hi rend="italic">Friend to</hi> Antipholis <hi rend="italic">of</hi> Syracuse</roleDesc>.</castItem>
+<lb xml:id="dpln_10" n="10" rend="print_tln"/><castItem><role xml:id="Merchant1"><hi rend="italic">A</hi> [<hi rend="italic">First</hi>] <hi rend="italic">Merchant</hi></role>, <roleDesc><hi rend="italic">Friend to</hi> Antipholis <hi rend="italic">of</hi> Syracuse</roleDesc>.</castItem>
 
-<lb xml:id="cast_line_11" n="11"/><castItem>[<role xml:id="Merchant2"><hi rend="italic">A Second Merchant</hi></role>, <roleDesc><hi rend="italic">to whom Angelo is a debtor</hi></roleDesc>.]</castItem>
+<lb xml:id="dpln_11" n="11"/><castItem>[<role xml:id="Merchant2"><hi rend="italic">A Second Merchant</hi></role>, <roleDesc><hi rend="italic">to whom Angelo is a debtor</hi></roleDesc>.]</castItem>
 
-<lb xml:id="cast_line_12" n="12"/><castItem><role xml:id="Pinch"><hi rend="italic">Dr</hi>. Pinch</role>, <roleDesc><hi rend="italic">a School-Master, and a Conjurer</hi></roleDesc>.</castItem>
+<lb xml:id="dpln_12" n="12"/><castItem><role xml:id="Pinch"><hi rend="italic">Dr</hi>. Pinch</role>, <roleDesc><hi rend="italic">a School-Master, and a Conjurer</hi></roleDesc>.</castItem>
 
-<lb xml:id="cast_line_13" n="13"/><castItem><role xml:id="Aemilia">Æmilia</role>, <roleDesc><hi rend="italic">Wife to</hi> Ægeon, <hi rend="italic">an Abbess at</hi> Ephesus</roleDesc>.</castItem>
+<lb xml:id="dpln_13" n="13"/><castItem><role xml:id="Aemilia">Æmilia</role>, <roleDesc><hi rend="italic">Wife to</hi> Ægeon, <hi rend="italic">an Abbess at</hi> Ephesus</roleDesc>.</castItem>
 
-<lb xml:id="cast_line_14" n="14"/><castItem><role xml:id="Adriana">Adriana</role>, <roleDesc><hi rend="italic">Wife to</hi> Antipholus <hi rend="italic">of</hi> Ephesus</roleDesc>.</castItem>
+<lb xml:id="dpln_14" n="14"/><castItem><role xml:id="Adriana">Adriana</role>, <roleDesc><hi rend="italic">Wife to</hi> Antipholus <hi rend="italic">of</hi> Ephesus</roleDesc>.</castItem>
 
-<lb xml:id="cast_line_15" n="15" rend="print_tln"/><castItem><role xml:id="Luciana">Luciana</role>, <roleDesc><hi rend="italic">Sister to</hi> Adriana</roleDesc>.</castItem>
+<lb xml:id="dpln_15" n="15" rend="print_tln"/><castItem><role xml:id="Luciana">Luciana</role>, <roleDesc><hi rend="italic">Sister to</hi> Adriana</roleDesc>.</castItem>
 
-<lb xml:id="cast_line_16" n="16"/><castItem><role xml:id="Luce">Luce</role>, <roleDesc><hi rend="italic">Servant to</hi> Adriana</roleDesc>.</castItem>
+<lb xml:id="dpln_16" n="16"/><castItem><role xml:id="Luce">Luce</role>, <roleDesc><hi rend="italic">Servant to</hi> Adriana</roleDesc>.</castItem>
 
-<lb xml:id="cast_line_17" n="17"/><castItem>[<role xml:id="Curtizan">Curtizan</role>.]</castItem>
+<lb xml:id="dpln_17" n="17"/><castItem>[<role xml:id="Curtizan">Curtizan</role>.]</castItem>
 
-<lb xml:id="cast_line_18" n="18"/><castItem rend="italic align(center)"><role xml:id="Jailor">Jailor</role>, <role xml:id="Officer">Officer</role>, <hi rend="clear">[</hi><role xml:id="Headsman">Headsman</role><hi rend="clear">]</hi> and other <role xml:id="Attendant">Attendants</role>.</castItem>
+<lb xml:id="dpln_18" n="18"/><castItem rend="italic align(center)"><role xml:id="Jailor">Jailor</role>, <role xml:id="Officer">Officer</role>, <hi rend="clear">[</hi><role xml:id="Headsman">Headsman</role><hi rend="clear">]</hi> and other <role xml:id="Attendant">Attendants</role>.<anchor type="marker" marker="]" rend="clear"/></castItem>
 
 <castItem display="all(suppress)"><role xml:id="Messenger"/></castItem>
 
@@ -805,7 +805,7 @@
 <lb xml:id="tln_0549" n="549"/>She sent for you by <name>Dromio</name> home to dinner.</p></sp>
 
 <milestone unit="sig_F" n="H3b">(H3<hi rend="superscript">b</hi>)</milestone>
-<lb xml:id="tln_0550" n="550" rend="print_tln"/><sp who="#Antipholus_Syracuse"><speaker>Ant.</speaker><p>By <name>Dromio</name>?</p></sp><sp who="#Dromio_Syracuse"><speaker>Drom.</speaker><p>By me.</p></sp>
+<lb xml:id="tln_0550" n="550" rend="print_tln"/><sp who="#Antipholus_Syracuse"><speaker>Ant.</speaker><p>By <name>Dromio</name>?</p></sp><sp who="#Dromio_Syracuse" rend="inline"><speaker>Drom.</speaker><p>By me.</p></sp>
 
 <lb xml:id="tln_0551" n="551"/><sp who="#Adriana"><speaker>Adr.</speaker><p>By thee, and this thou didst returne from him.
 <lb xml:id="tln_0552" n="552"/>That he did buffet thee, and in his blowes,
@@ -1799,7 +1799,7 @@
 <lb xml:id="tln_1236" n="1236"/>thereof comes, that the wenches say God dam me, That’s
 <lb xml:id="tln_1237" n="1237"/>as much to say, God make me a light wench: It is writ&shy;
 <lb xml:id="tln_1238" n="1238"/>ten, they appeare to men like angels of light, light is an
-<lb xml:id="tln_1239" n="1239"/>effect of fire, and fire will burne: <foreign xml:lang="la">ergo</foreign>, light wenches will
+<lb xml:id="tln_1239" n="1239"/>effect of fire, and fire will burne: <foreign xml:lang="la" rend="italic">ergo</foreign>, light wenches will
 <lb xml:id="tln_1240" n="1240" rend="print_tln"/>burne, come not neere her.</p></sp>
 
 <lb xml:id="tln_1241" n="1241"/><sp who="#Curtizan"><speaker>Cur.</speaker><p>Your man and you are maruailous merrie sir.
@@ -1925,7 +1925,7 @@
 <lb xml:id="tln_1323" n="1323"/><sp who="#Antipholus_Ephesus"><speaker>Ant.</speaker><p>Come goe along, my wife is comming yon&shy;
 <lb xml:id="tln_1324" n="1324"/>der.</p></sp>
 
-<lb xml:id="tln_1325" n="1325" rend="print_tln"/><sp who="#Dromio_Ephesus"><speaker>E. Dro.</speaker><p>Mistris <foreign xml:lang="la">respice finem</foreign>, respect your end, or ra&shy;
+<lb xml:id="tln_1325" n="1325" rend="print_tln"/><sp who="#Dromio_Ephesus"><speaker>E. Dro.</speaker><p>Mistris <foreign xml:lang="la" rend="italic">respice finem</foreign>, respect your end, or ra&shy;
 <lb xml:id="tln_1326" n="1326"/>ther the prophesie like the Parrat, beware the ropes end.</p></sp>
 
 <lb xml:id="tln_1327" n="1327"/><sp who="#Antipholus_Ephesus"><speaker>Anti.</speaker><p>Wilt thou still talke?</p></sp><stage type="description" rend="align(right)">Beats <name>Dro.</name></stage>
@@ -1977,12 +1977,12 @@
 
 <lb xml:id="tln_1358" n="1358"/><sp who="#Antipholus_Ephesus"><speaker>Anti.</speaker><p>And did not she her selfe reuile me there?</p></sp>
 
-<lb xml:id="tln_1359" n="1359"/><sp who="#Dromio_Ephesus"><speaker>Dro.</speaker><p><foreign xml:lang="fr">Sans</foreign> Fable, she her selfe reuil’d you there.</p></sp>
+<lb xml:id="tln_1359" n="1359"/><sp who="#Dromio_Ephesus"><speaker>Dro.</speaker><p><foreign xml:lang="fr" rend="italic">Sans</foreign> Fable, she her selfe reuil’d you there.</p></sp>
 
 <lb xml:id="tln_1360" n="1360" rend="print_tln"/><sp who="#Antipholus_Ephesus"><speaker>Anti.</speaker><p>Did not her Kitchen maide raile, taunt, and
 <lb xml:id="tln_1361" n="1361"/>scorne me?</p></sp>
 
-<lb xml:id="tln_1362" n="1362"/><sp who="#Dromio_Ephesus"><speaker>Dro.</speaker><p><foreign xml:lang="la">Certis</foreign> she did, the kitchin vestall scorn’d you.</p></sp>
+<lb xml:id="tln_1362" n="1362"/><sp who="#Dromio_Ephesus"><speaker>Dro.</speaker><p><foreign xml:lang="la" rend="italic">Certis</foreign> she did, the kitchin vestall scorn’d you.</p></sp>
 
 <lb xml:id="tln_1363" n="1363"/><sp who="#Antipholus_Ephesus"><speaker>Ant.</speaker><p>And did not I in rage depart from thence?</p></sp>
 
