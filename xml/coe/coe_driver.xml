@@ -54,7 +54,7 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   </availability>
   <idno type="ISBN">978-0-87352-296-0</idno>
   <idno type="LC">PR2804.A2H45 2009</idno>
-  <idno type="D">822.3'3—dc22</idno>
+  <idno type="D">822.3′3—dc22</idno>
 </publicationStmt>
 	
 <seriesStmt>
@@ -114,12 +114,13 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
 </profileDesc>
 
 <revisionDesc>
-	<change when="2013-08-16" who="#RB">Version 1.1.0: Updated to conform with Lear encoding</change>
+	<change when="2014-02-12" who="#RB">Version 1.1.2: Minor updates</change>
+	<change when="2013-08-16" who="#RB">Version 1.1.1: Updated to conform with Lear encoding</change>
 	<change when="2011-11-10" who="#RB">Version 1.0.1: Final release for DVD; fixed encoding error in Menaechmi</change>
 	<change when="2011-10-26" who="#RB">Version 1.0.0: Reconfigured revisionDesc</change>
 	<change when="2011-10-21" who="#RB">Version 0.9.12: Contracted date range on title page and in TEI Header</change>
 	<change when="2011-10-14" who="#RB">Version 0.9.11: Restored extra period in Salingar entry</change>
-	<change when="2011-10-12" who="#RB">Version 0.9.10: Removed Orger "Histories" biblio entry; adjusted refs</change>
+	<change when="2011-10-12" who="#RB">Version 0.9.10: Removed Orger “Histories” biblio entry; adjusted refs</change>
 	<change when="2011-10-05" who="#RB">Version 0.9.9: Entered minor textual corrections</change>
 	<change when="2011-09-29" who="#RB">Version 0.9.8: Entered all correx to date</change>
 	<change when="2010-05-18" who="#RB">Version 0.9.7: Minor encoding changes</change>

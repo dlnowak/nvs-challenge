@@ -33,7 +33,7 @@
 
 <docTitle>
 <titlePart type="series">A New Variorum Edition of Shakespeare</titlePart>
-<titlePart type="volume">The Winter's Tale</titlePart>
+<titlePart type="volume">The Winter’s Tale</titlePart>
 </docTitle>
 
 <byline><hi rend="italic">Edited by</hi> <lb/><editor role="primary">Robert Kean Turner</editor> <lb/><editor role="primary">Virginia Westling Haas</editor> <lb/><hi rend="italic">with</hi> <lb/><editor role="secondary">Robert A. Jones</editor> <lb/><editor role="secondary">Andrew J. Sabol</editor> <lb/><editor role="secondary">Patricia E. Tatspaugh</editor></byline>
@@ -56,7 +56,7 @@
 <p>Library of Congress Cataloging-in-Publication Data</p>
 
 <p>Shakespeare, William, 1564–1616.
-<lb rend="indent(2em)"/>The winter's tale / edited by Robert Kean Turner, Virginia Westling Haas; with Robert A. Jones, Andrew J. Sabol, Patricia E. Tatspaugh.
+<lb rend="indent(2em)"/>The winter’s tale / edited by Robert Kean Turner, Virginia Westling Haas; with Robert A. Jones, Andrew J. Sabol, Patricia E. Tatspaugh.
 <lb rend="indent(2em)"/><space extent="1em"/>p.<space extent="2em"/>cm.—(A new variorum edition of Shakespeare)
 <lb rend="indent(2em)"/>Includes bibliographical references and index.
 <lb rend="indent(2em)"/>ISBN 0-87352-294-X (alk. paper)
@@ -984,7 +984,7 @@ Capell’s version of the stage direction is <hi rend="italic">pulling the Boy t
 
 <witness xml:id="s_m1778bl">
 <siglum>m1778<hi rend="smcaps">bl</hi></siglum>
-<bibl><name type="app">Isaac Reed</name> and others (Edmond Malone? Samuel Henley? John? Henderson?). MS notes in Johnson &amp; Steevens's 1778 ed. British Library.</bibl>
+<bibl><name type="app">Isaac Reed</name> and others (Edmond Malone? Samuel Henley? John? Henderson?). MS notes in Johnson &amp; Steevens’s 1778 ed. British Library.</bibl>
 <date>–1785</date>
 </witness>
 

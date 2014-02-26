@@ -52,7 +52,7 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
     </availability>
     <idno type="ISBN">0-87352-294-X (alk. paper)</idno>
     <idno type="LC">PR2839.A2T87 2004</idno>
-    <idno type="D">822.3'3—dc22</idno>
+    <idno type="D">822.3′3—dc22</idno>
   </publicationStmt>
 	
   <seriesStmt>
@@ -115,15 +115,17 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   </profileDesc>
 
 <revisionDesc>
+	<change when="2014-02-12" who="#RB">Version 1.2.2: Minor updates</change>
+	<change when="2014-02-07" who="#RB">Version 1.2.1: Added note type=“source” encoding</change>
 	<change when="2013-08-16" who="#RB">Version 1.2.0: Updated to conform with Lear encoding</change>
-    <change when="2012-07-06" who="#RB">Version 1.1.3: Initial updates to conform with Lear encoding</change>
-    <change when="2010-05-24" who="#RB">Version 1.1.2: Index is commented out</change>
-    <change when="2010-05-18" who="#RB">Version 1.1.1: Minor encoding changes</change>
-    <change when="2010-02-21" who="#RB">Version 1.1.0: Converted to TEI P5</change>
-    <change when="2008-05-24" who="#RB">Version 1.0.3: Minor encoding fixes</change>
-    <change when="2007-05-26" who="#RB">Version 1.0.2: Updated to conform with COE encoding</change>
-    <change when="2005-12-12" who="#RB">Version 1.0.1: Added rend and type attributes to stage; misc fixes</change>  
-    <change when="2005-10-06" who="#RB">Version 1.0.0: Re-encoding complete</change> 
+	<change when="2012-07-06" who="#RB">Version 1.1.3: Initial updates to conform with Lear encoding</change>
+	<change when="2010-05-24" who="#RB">Version 1.1.2: Index is commented out</change>
+	<change when="2010-05-18" who="#RB">Version 1.1.1: Minor encoding changes</change>
+	<change when="2010-02-21" who="#RB">Version 1.1.0: Converted to TEI P5</change>
+	<change when="2008-05-24" who="#RB">Version 1.0.3: Minor encoding fixes</change>
+	<change when="2007-05-26" who="#RB">Version 1.0.2: Updated to conform with COE encoding</change>
+	<change when="2005-12-12" who="#RB">Version 1.0.1: Added rend and type attributes to stage; misc fixes</change>  
+	<change when="2005-10-06" who="#RB">Version 1.0.0: Re-encoding complete</change> 
 </revisionDesc>
 
 </teiHeader>
