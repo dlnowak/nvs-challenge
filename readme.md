@@ -4,14 +4,13 @@ The MLA Committee on the New Variorum Edition of Shakespeare (NVS) is sponsoring
 
 The committee seeks entries featuring new means of displaying, representing, and exploring this data in the most exciting API, interface, visualization, or data-mining project. It is especially interested in entries that combine the NVS data with another Shakespearian project, such as _Folger Digital Texts_, _Internet Shakespeare Editions_, or _Open Source Shakespeare_. The goal is to see the possibilities of the NVS in digital form and, in particular, the innovations in scholarly research that might be enabled by opening up the NVS’s code. Projects will thus be judged both on the quality of the interface they provide for the NVS and on the insights produced by the mash-up.
 
-The deadline for entries is 1 August 2014. The committee will assess the submissions and select the winner no later than 15 September 2014. The prize of $500 and an award certificate will be given at the 2015 MLA convention in Vancouver.
+The deadline for entries is 1 September 2014. The committee will assess the submissions and select the winner no later than 1 October 2014. The prize of $500 and an award certificate will be given at the 2015 MLA convention in Vancouver.
 
 Entries may be sent to <nvs@mla.org>.  Questions about the NVS Digital Challenge should be addressed to Kathleen Fitzpatrick, director of scholarly communication, at <kfitzpatrick@mla.org>.
 
 For more information about our partner projects, please contact Michael Best (<mbest1@uvic.ca>), of _Internet Shakespeare Editions_, or Eric Johnson (<eric.johnson@folger.edu>), of _Open Source Shakespeare_ and _Folger Digital Texts_.
 
-Please note that our partners are available to answer questions about the
- resources, not to provide technical support.
+Please note that our partners are available to answer questions about the resources, not to provide technical support.
 
 ### The First Round
 
