@@ -2,6 +2,8 @@
 
 The MLA Committee on the New Variorum Edition of Shakespeare (NVS) is sponsoring its third digital challenge to find the most innovative and compelling uses of the data contained in one of the NVS editions. The MLA is making available the XML files and schema for two volumes, _The Winter’s Tale_ and _The Comedy of Errors_, under a [Creative Commons BY-NC 4.0 license][cc-by-nc].
 
+A short introduction to the NVS edition and the opportunities it provides for digital forms can be found [here][intro].
+
 The committee seeks entries featuring new means of displaying, representing, and exploring this data in the most exciting API, interface, visualization, or data-mining project. Entries may be in code, but contestants are encouraged to create wireframes that visualize the various uses of the XML files and serve as schemata for programmers. This will involve a visual and written rationale that offers rigorous scholarly and theoretical reflection.
 
 The goal is to see the possibilities of the NVS in digital form and, in particular, the innovations in scholarly research, teaching, or acting and directing that might be enabled by opening up the NVS’s code. Projects will thus be judged both on the quality of the interface they provide for the NVS and on the insights produced by the mash-up. The committee is especially interested in entries that combine the NVS data with another Shakespearian project, such as _Folger Digital Texts_, _Internet Shakespeare Editions_, or _Open Source Shakespeare_.
@@ -16,7 +18,7 @@ Please note that our partners are available to answer questions about the resour
 
 ### The First Two Rounds
 
-In the 2012 digital challenge, the MLA released the XML files and schema for _The Comedy of Errors_ under a [Creative Commons BY-NC 3.0 license][cc-by-nc]. The winner of the challenge was Patrick Murray-John’s _Bill-Crit-O-Matic_ (<http://billcritomatic.org>). The runner-up was Doug Reside and Gregory Lord’s _Comedy of Errors_ (<http://comedyoferrors.zengrove.com>). No award was given in the 2014 challenge.
+In the 2012 digital challenge, the MLA released the XML files and schema for _The Comedy of Errors_ under a [Creative Commons BY-NC 3.0 license][cc-by-nc]. The winner of the challenge was Patrick Murray-John’s _Bill-Crit-O-Matic_ (<http://hackingthehumanities.org/post/s-hack-speare-or-building-bill-crit-o-matic>). The runner-up was Doug Reside and Gregory Lord’s _Comedy of Errors_ (<http://comedyoferrors.zengrove.com>). No award was given in the 2014 challenge.
 
 ### A Note on Data Design and TEI Conformance
 
@@ -37,3 +39,4 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 In
 ![Creative Commons License](http://i.creativecommons.org/l/by-nc/4.0/88x31.png)
 
 [cc-by-nc]: http://creativecommons.org/licenses/by-nc/4.0/
+[intro]: https://nvs.commons.mla.org/2015/09/24/short-intro-to-nvs/
