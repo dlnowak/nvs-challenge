@@ -18,7 +18,7 @@ Please note that our partners are available to answer questions about the resour
 
 ### The First Two Rounds
 
-In the 2012 digital challenge, the MLA released the XML files and schema for _The Comedy of Errors_ under a [Creative Commons BY-NC 3.0 license][cc-by-nc]. The winner of the challenge was Patrick Murray-John’s _Bill-Crit-O-Matic_ (<http://hackingthehumanities.org/post/s-hack-speare-or-building-bill-crit-o-matic>). The runner-up was Doug Reside and Gregory Lord’s _Comedy of Errors_ (<http://comedyoferrors.zengrove.com>). No award was given in the 2014 challenge.
+In the 2012 digital challenge, the MLA released the XML files and schema for _The Comedy of Errors_ under a [Creative Commons BY-NC 3.0 license][cc-by-nc]. The winner of the challenge was Patrick Murray-John’s _Bill-Crit-O-Matic_. For more information about the development of _Bill-Crit-O-Matic_, please visit [Murray-John’s blog post][bill-crit]. The runner-up was Doug Reside and Gregory Lord’s _Comedy of Errors_ (<http://comedyoferrors.zengrove.com>). No award was given in the 2014 challenge.
 
 ### A Note on Data Design and TEI Conformance
 
@@ -40,3 +40,4 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 In
 
 [cc-by-nc]: http://creativecommons.org/licenses/by-nc/4.0/
 [intro]: https://nvs.commons.mla.org/2015/09/24/short-intro-to-nvs/
+[bill-crit]: http://hackingthehumanities.org/post/s-hack-speare-or-building-bill-crit-o-matic
